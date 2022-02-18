@@ -44,7 +44,7 @@
 
 
   <!-- Inner first child table displayed upon click on the parent row -->
-  <h6 class="mt-3 ms-4" v-if="child1.length && childRowOpened">HAS_RELATIVES</h6>
+  <h6 class="mt-3 ms-4" v-if="child1.length && parentRowOpened">HAS_RELATIVES</h6>
   <table v-if="(ind == openIndex && parentRowOpened) && child1.length" class="table" style="margin-left: 20px;">
     <thead style="background: #f3f3f8; border: 0px solid white;">
       <tr class="d-flex">
@@ -107,7 +107,8 @@
         <td class="w-50">{{parent.data['Admission date']}}</td>
         <td class="w-50">{{parent.data['Last breakdown']}}</td>
         <td class="w-25">{{parent.data['Yearly fee']}}</td>
-        <td class="w-50" @click="delParentRow(index)">{{parent.data['Knows the Joker?']}}</td>
+        <td class="w-50">{{parent.data['Knows the Joker?']}}</td>
+        <td @click="delParentRow(index)" style="cursor: pointer;"><b>&#120;</b>&nbsp;</td>
       </tr>
     </tbody>  
   </table>
@@ -208,9 +209,7 @@ export default defineComponent({
           this.child2 = [];
         } 
         this.openIndexChild = i;  // position this code set at the end of the method in order to not interfere with the if-else states
-
       } 
-    
     }
   }
 });

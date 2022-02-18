@@ -1,5 +1,5 @@
 <template>
-<div class="countainer-fluid">
+<div class="container-fluid">
   <h6 class="mt-3 ms-2">MYDATA.JSON</h6>
 
   <!-- *** Table *** -->

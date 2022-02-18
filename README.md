@@ -1,6 +1,6 @@
 ### HIERARCHY TABLE ... made with Vue 3 + Typescript + Vite bundler
 
-*** HOW TO START ***  
+#### *** HOW TO START ***  
 npm install  
 npm run dev
 
